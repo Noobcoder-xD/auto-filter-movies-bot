@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: Moviesss Bot
+    runtime: python
+    branch: master 
+    startCommand: python3 bot.py
+    buildCommand: pip3 install -U -r requirements.txt
+    region: singapore
+    
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.8
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: ADMINS
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: BOT_USERNAME
+        sync: false
+      - key: COLLECTION_NAME
+        value: Telegram_files
+      - key: DATABASE_NAME
+        sync: false
+      - key: DATABASE_URI
+        sync: false
+      - key: FILE_STORE_CHANNEL
+        sync: false
+      - key: LOG_CHANNEL
+        sync: false
+      - key: PICS
+        sync: false
+    plan: free
